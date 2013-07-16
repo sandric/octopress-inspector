@@ -1,8 +1,7 @@
-require 'net/https'
 require 'json'
 
 module Jekyll
-  class InspectBlock < Liquid::Tag
+  class InspectTag < Liquid::Tag
 
     def initialize(tag_name, markup, tokens)
       super
@@ -26,4 +25,4 @@ module Jekyll
   end
 end
 
-Liquid::Template.register_tag('inspect', Jekyll::InspectBlock)
+Liquid::Template.register_tag('inspect', Jekyll::InspectTag)
